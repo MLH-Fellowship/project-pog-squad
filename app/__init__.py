@@ -5,10 +5,25 @@ from dotenv import load_dotenv
 load_dotenv()  # Loads .env file
 app = Flask(__name__)
 
+"""
 # Index route
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))  # Page content
+"""
+
+@app.route('/')
+def home():
+    return "Fix later."
+
+@app.route('/Victor')
+def victor_page():
+    return render_template('victor.html', title="Victor B.", url=os.getenv("URL"))
+
+@app.route('/Talike')
+def talike_page():
+    return render_template('talike.html', title="Talike B.", url=os.getenv("URL"))
+
 
 # Branch to run site
 if __name__ == "__main__":
