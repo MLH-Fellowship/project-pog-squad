@@ -2,6 +2,10 @@ p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
 
+h4 {
+    color: gray;
+}
+
 body {
     background-color: #f5f5f9;
     background-size: cover;
@@ -96,7 +100,20 @@ body {
     font-weight: 700;
 }
 
-.about-me {
-    margin-left: 50px;
-    margin-left: 50px;
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 600px;
+    align-self: center;
 }
+
+.about-me, .job-experience, .education {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+/*
+.job-experience {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+*/
