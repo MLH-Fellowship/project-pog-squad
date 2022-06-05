@@ -1,5 +1,13 @@
-p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    font-family: "Raleway", serif;
 }
 
 h4 {
@@ -9,7 +17,7 @@ h4 {
 body {
     background-color: #f5f5f9;
     background-size: cover;
-    width: auto; 
+    width: auto;
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
@@ -22,6 +30,11 @@ body {
     font-family: "Roboto", serif;
     font-weight: 700 !important;
     padding-top: 10px;
+
+    background-image: linear-gradient(90deg,
+            hsl(171deg 81% 51%) 1%,
+            hsl(211deg 41% 72%) 50%,
+            hsl(297deg 64% 67%) 99%);
 }
 
 .nav-content .logo-touch-target {
@@ -58,22 +71,27 @@ body {
     text-align: center;
     height: 320px;
     margin-bottom: 50px;
+
+    background-image: linear-gradient(90deg,
+            hsl(171deg 81% 51%) 1%,
+            hsl(211deg 41% 72%) 50%,
+            hsl(297deg 64% 67%) 99%);
 }
 
 .profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
 }
 
 .profile img {
-        border-radius: 50%;
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;        
-        padding: 20px;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 20px;
 }
 
 .profile .profile-picture {
@@ -88,8 +106,8 @@ body {
 }
 
 .banner .logo {
-    max-width:180px;
-    max-height:60px;
+    max-width: 180px;
+    max-height: 60px;
     width: auto;
     height: auto;
 }
@@ -98,4 +116,80 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 700;
+}
+
+main {
+    width: min(1200px, 100%);
+    margin: 100px auto;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+section {
+    padding: 0 50px;
+}
+
+.section-title {
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.item-title {
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.item-subtitle {
+    margin: 0;
+    font-weight: 300;
+}
+
+.item-date {
+    text-align: end;
+    width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul, p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.hobbies-button {
+    padding: 30px;
+    margin: auto;
+    background-color: blueviolet;
+    color: white;
+    font-size: large;
+}
+
+.hobbies {
+    font-size: 2rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+
+.user-switch {
+    position: absolute;
+    margin-left: 15px;
+}
+
+.user-switch > a {
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: black    ;
 }

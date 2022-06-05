@@ -1,74 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'index.html' %}
 
-<!-- TODO: Find a way to apply template inheritance to this file -->
+{% block content %}
+    <section>
+        <h2 class="section-title">About Me</h2>
+        {% block about %}{% endblock about %}
+    </section>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+    <hr>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <section>
+        <h2 class="section-title">Work Experience</h2>
+        {% block work %}{% endblock work %}
+    </section>
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/home.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
-</head>
+    <hr>
 
-<body>
-    <div class="row">
-        <div class="column">
-            <a href="{{ url_for('talike_page') }}">
-                <img src="./static/img/Talike.jpg" />
-            </a>
-        </div>
-        <div class="column">
-            <a href="{{ url_for('victor_page') }}">
-                <img src="./static/img/Victor.jpeg" />
-            </a>
-        </div>
-      </div>
-=======
-<!DOCTYPE html>
-<html lang="en">
+    <section>
+        <h2 class="section-title">Education</h2>
+        {% block education %}{% endblock education %}
+    </section>
 
-<!-- TODO: Find a way to apply template inheritance to this file -->
+    <hr>
+    
+    <section>
+        <h2 class="section-title">Hobbies</h2>
+        <a href="{{ url_for('victor') }}" class="hobbies">Click to open Hobbies</a>
+    </section>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+    <hr>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <link lang='sass' rel="stylesheet" href="./static/styles/home.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
-</head>
-
-<body>
-    <div class="row">
-        <div class="column">
-            <a href="{{ url_for('talike_page') }}">
-                <img src="./static/img/Talike.jpg" />
-            </a>
-        </div>
-        <div class="column">
-            <a href="{{ url_for('victor_page') }}">
-                <img src="./static/img/Victor.jpeg" />
-            </a>
-        </div>
-      </div>
-</body>
+    <section>
+        <h2 class="section-title">Places I've been</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59726.34441281601!2d-103.370432582119!3d20.673788314988638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b18cb52fd39b%3A0xd63d9302bf865750!2sGuadalajara%2C%20Jalisco!5e0!3m2!1sen!2smx!4v1654414938134!5m2!1sen!2smx" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+{% endblock content %}
