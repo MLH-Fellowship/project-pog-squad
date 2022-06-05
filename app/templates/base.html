@@ -22,6 +22,9 @@
 <body>
     <header class="nav-bar">
         <div class="nav-content">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('talike_page') }}">Talike</a>
+            <a href="{{ url_for('victor_page') }}">Victor</a>
             <a href="/">
                 <div class="nav-logo">
                     <img src="./static/img/logo.svg" />
@@ -41,6 +44,20 @@
     <div class="about-me">
         <h2>About Me</h2>
         {% block desc %}{% endblock %}
+    </div>
+
+    <hr class="solid">
+
+    <div class="job-experience">
+        <h2>Job Experience</h2>
+        {% block job %}{% endblock %}
+    </div>
+
+    <hr class="solid">
+
+    <div class="education">
+        <h2>Education</h2>
+        {% block edu %}{% endblock %}
     </div>
 </body>
 </html>
