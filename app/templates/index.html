@@ -25,23 +25,21 @@
 <body>
     <header class="nav-bar">
         <div class="user-switch">
-            <a href="#">Victor</a>
+            <a href="{{ url_for('victor') }}">Victor</a>
             <span>|</span>
-            <a href="#">Talike</a>
+            <a href="{{ url_for('talike') }}">Talike</a>
         </div>
 
         <div class="nav-content">
-            <a href="/">
-                <div class="nav-logo">
-                    <img src="/static/img/logo.svg" />
-                </div>
-            </a>
+            <div class="nav-logo">
+                <img src="/static/img/logo.svg" />
+            </div>
         </div>
     </header>
 
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="/static/img/Victor.jpeg">
+            <img src="/static/img/{{img}}">
         </div>
         <h1>{{ title }}</h1>
     </div>
