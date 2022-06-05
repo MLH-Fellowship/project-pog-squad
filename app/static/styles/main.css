@@ -96,7 +96,14 @@ body {
     font-weight: 700;
 }
 
-.about-me {
-    margin-left: 50px;
-    margin-right: 50px;
+.hr.solid {
+    border-top: 3px solid #bbb;
+    width: 600px;
+    align-self: center;
 }
+
+.about-me, .job-experience, .education {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
