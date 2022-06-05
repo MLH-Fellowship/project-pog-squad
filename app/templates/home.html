@@ -21,10 +21,14 @@
     </section>
 
     <hr>
-    
+
     <section>
         <h2 class="section-title">Hobbies</h2>
+        {% if self._TemplateReference__context.name == '/victor/home.html'}
         <a href="{{ url_for('victor_hobbies') }}" class="hobbies">Click to open Hobbies</a>
+        {% else %}
+        <a href="{{ url_for('talike_hobbies') }}" class="hobbies">Click to open Hobbies</a>
+        {% endif %}
     </section>
 
     <hr>
