@@ -99,14 +99,3 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
-
-hr.solid {
-    border-top: 3px solid #bbb;
-    width: 600px;
-    align-self: center;
-}
-
-.about-me, .job-experience, .education {
-    margin-left: 400px;
-    margin-right: 400px;
-}
