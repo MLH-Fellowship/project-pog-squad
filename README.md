@@ -4,7 +4,9 @@
 **Members:** Victor Bustillos, Talike Bennett
 
 ## Description
-...
+For this project, we were tasked with creating a portfolio website using the Flask framework and Jinja templates. We were provided a foundation for the project -- consisting of `__init__.py`, `index.html`, and `main.css` -- and added our unique features from there. A custom page was made for each of the team members. For each page, we listed a few aspects of our lives with sections such as About Me, Work Experience, and Education. We linked our Hobbies section to another page that displays images associated with our hobbies. We even made use of Google Maps to embed a map that highlisghts places that we have traveled to.
+
+The Jinja template engine came in handy because it reduced the amount of repeated code we needed to write. The CSS stylesheet also helped with adding visually appealing features to the website pages.
 
 ## Setup
 1. Before running the website, make sure to install `virtualenv` using PIP. 
