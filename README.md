@@ -8,6 +8,11 @@ For this project, we were tasked with creating a portfolio website using the Fla
 
 The Jinja template engine came in handy because it reduced the amount of repeated code we needed to write. The CSS stylesheet also helped with adding visually appealing features to the website pages.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/65676639/172240028-1b4dc8be-ee72-441f-8916-c0e933681bec.png" width="500">
+  <img src="https://user-images.githubusercontent.com/65676639/172240053-1dac51a7-1992-4f33-adc8-cfa5c52ed967.png" width="500">
+</p>
+
 ## Setup
 1. Before running the website, make sure to install `virtualenv` using PIP. 
 ```
