@@ -180,6 +180,13 @@ ul, p {
     display: block;
     text-align: center;
     margin: 50px;
+    transition: transform .2s;
+    transition: color;
+}
+
+.hobbies:hover {
+    transform: scale(1.25);
+    color: blue;
 }
 
 .user-switch {
