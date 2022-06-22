@@ -1,40 +1,141 @@
-{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-    <section>
-        <h2 class="section-title">About Me</h2>
-        {% block about %}{% endblock about %}
-    </section>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
 
-    <hr>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
-    <section>
-        <h2 class="section-title">Work Experience</h2>
-        {% block work %}{% endblock work %}
-    </section>
+    <link lang='sass' rel="stylesheet" href="/static/styles/main.css">
+    <link rel='icon' href='/static/img/favicon.ico' type='image/x-icon' />
+    <title>{{ title }}</title>
 
-    <hr>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
 
-    <section>
-        <h2 class="section-title">Education</h2>
-        {% block education %}{% endblock education %}
-    </section>
+<body>
+    <header class="nav-bar">
+        <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="/static/img/logo.svg" />
+                </div>
+        </div>
+    </header>
 
-    <hr>
+    <div class="profile">
+        <div id="profile-picture" class="profile-picture">
+            <img src="/static/{{img}}">
+        </div>
+        <h1>{{ title }}</h1>
+    </div>
 
-    <section>
-        <h2 class="section-title">Hobbies</h2>
-        {% if self._TemplateReference__context.name == '/victor/home.html' %}
-        <a href="{{ url_for('victor_hobbies') }}" class="hobbies">Click to open Hobbies</a>
-        {% else %}
-        <a href="{{ url_for('talike_hobbies') }}" class="hobbies">Click to open Hobbies</a>
-        {% endif %}
-    </section>
+    <main>
+        <section>
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a Computer Science major at the City College of New York (CCNY). <br>
+                I was born in Manhattan, but I have lived in Brooklyn most of my life. <br>
+                I am working towards being a full-stack software engineer.
+            </p>
+        </section>
 
-    <hr>
+        <hr>
 
-    <section>
-        <h2 class="section-title">Places I've been</h2>
-        {% block map %}{% endblock map %}
-    </section>
-{% endblock content %}
+        <section>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="item">
+                <div class="item-details">
+                    <div style="display:flex; align-items:center">
+                        <h3 class="item-title">Production Engineering Fellow</h3>
+                        <div class="item-date">
+                            May 2022 - Current
+                        </div>
+                    </div>
+                    <h4 class="item-subtitle">Major League Hacking</h4>
+                    <ul>
+                        <li>Meeting with Meta engineers to learn more about production engineering and its significance.</li>
+                        <li>Working on personal projects in small groups to acquire hands-on production engineering experience.</li>
+                        <li>Attending workshops led by specialists from organizations like MLH and Google to get familiar with tools and skills that are useful in the workplace.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="item">
+                <div class="item-details">
+                    <div style="display:flex; align-items:center">
+                        <h3 class="item-title">Intern</h3>
+                        <div class="item-date">
+                            Jan 2022
+                        </div>
+                    </div>
+                    <h4 class="item-subtitle">United Nations International Computing Centre</h4>
+                    <ul>
+                        <li>Conducted research and prepared presentations about the UNICC's goals and partner organizations using Microsoft Office products.</li>
+                        <li>Created compelling infographics with 3 team members using given data, Canva, and a small C++ program in order to help with future actions.</li>
+                        <li>Composed an annual report with a team member by interviewing cybersecurity staff and making use of Microsoft Office products in order to depict the changes in services provided by the UNICC.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="item">
+                <div class="item-details">
+                    <div style="display:flex; align-items:center">
+                        <h3 class="item-title">Student</h3>
+                        <div class="item-date">
+                            Apr 2019 - Present
+                        </div>
+                    </div>
+                    <h4 class="item-subtitle">Publicolor</h4>
+                    <ul>
+                        <li>Paint Club: Collaborated with other students to paint BASE High School.</li>
+                        <li>Next Steps: Spent the weekends painting schools in Brooklyn, Manhattan, and Queens with other Publicolor students.</li>
+                        <li>Summer Design Studio: Designed compelling projects with a team of Publicolor students using Gravit and graphic design concepts.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+                <div class="item-details">
+                    <div style="display:flex; align-items:center">
+                        <h3 class="item-title">The City College of New York</h3>
+                        <div class="item-date">
+                            Aug 2020 - Present (Expected Graduation: May 2024)
+                        </div>
+                    </div>
+                    <h4 class="item-subtitle">Bachelor of Science in Computer Science, 4th Semester, 3.6 GPA</h4>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2 class="section-title">Hobbies</h2>
+            <a href="{{ url_for('hobbies') }}" class="hobbies">Click to open Hobbies</a>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2 class="section-title">Places I've been</h2>
+            <!-- Embeds map from Google Maps -->
+            <iframe src="https://www.google.com/maps/d/embed?mid=1jJaW08WHeVyGnyM7ppRYygldJt2ra5g&ehbc=2E312F" width="100%" height="500"></iframe>
+        </section> 
+    </main>
+</body>
+</html>
