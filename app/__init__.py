@@ -5,7 +5,7 @@ from dotenv import load_dotenv # ?
 
 # NOTE: url_for is linked to the functions below and returns the corresponding index; preferred over hardcoding links
 
-load_dotenv()  # Loads .env file
+load_dotenv() # Loads .env file
 app = Flask(__name__)
 
 @app.route("/")
