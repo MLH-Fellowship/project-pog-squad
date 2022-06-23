@@ -66,6 +66,10 @@ body {
     height: 200px;
 }
 
+.tabs {
+    padding-bottom: 20px;
+}
+
 /*
 .nav-content .logo-touch-target {
     display: inline-flex;
