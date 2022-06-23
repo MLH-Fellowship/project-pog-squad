@@ -159,4 +159,9 @@ ul, p {
 
 .hobbies img {
     height: 200px;
+    padding: 10px;
+}
+
+.hobbies h3 {
+    padding: 10px;
 }
