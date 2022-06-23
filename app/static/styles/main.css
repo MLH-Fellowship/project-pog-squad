@@ -25,6 +25,7 @@ body {
 
 .nav-bar {
     width: 100%;
+    height: max-content;
     display: inline-block;
     /* background-color: #1C539F; */
     font-family: "Roboto", serif;
