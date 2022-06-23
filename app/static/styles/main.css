@@ -159,7 +159,7 @@ ul, p {
 
 .hobbies .item {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .hobbies img {
