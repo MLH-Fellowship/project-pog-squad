@@ -23,27 +23,22 @@
 
 <body>
     <header class="nav-bar">
-        <div class="nav-content">
-                <div class="nav-logo">
-                    <img src="/static/img/logo.svg" />
-                </div>
+        <div class="nav-logo">
+            <img src="/static/img/logo.svg" />
         </div>
+        <div class="profile">
+            <div id="profile-picture" class="profile-picture">
+                <img src="/static/{{img}}">
+            </div>
+            <h1>{{ title }}</h1>
+        </div>
+    
+        <nav class="tabs">
+            <a href="{{ url_for('home') }}">Fellowship Experience</a> |
+            <a href="{{ url_for('about_me') }}">About Me</a> |
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
     </header>
-
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="/static/{{img}}">
-        </div>
-        <h1>{{ title }}</h1>
-    </div>
-
-    <div class="tabs">
-        <a href="{{ url_for('home') }}">Fellowship Experience</a>
-        <span> | </span>
-        <a href="{{ url_for('about_me') }}">About Me</a>
-        <span> | </span>
-        <a href="{{ url_for('contact') }}">Contact</a>
-    </div>
 
     <main>
         {% block content %}{% endblock %}
