@@ -157,9 +157,14 @@ ul, p {
     color: black;
 }
 
-.hobbies .item {
+.hobbies .row {
     display: flex;
     align-items: center;
+}
+
+.hobbies .item {
+    flex: 50%;
+    padding: 20px;
 }
 
 .hobbies img {
