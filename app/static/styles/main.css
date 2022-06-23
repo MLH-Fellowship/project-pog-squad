@@ -157,6 +157,11 @@ ul, p {
     color: black;
 }
 
+.hobbies .item {
+    display: flex;
+    /* align-items: center; */
+}
+
 .hobbies img {
     height: 200px;
     padding: 10px;
