@@ -169,7 +169,6 @@ ul, p {
 
 .hobbies .item {
     flex: 50%;
-    /* padding: 20px; */
     align-items: center;
 }
 
@@ -178,11 +177,16 @@ ul, p {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
-    /* padding: 10px; */
 }
 
 .hobbies h3 {
     text-align: center;
-    /* padding: 10px; */
 }
 /**********/
+
+.week-5 img {
+    display: block;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
