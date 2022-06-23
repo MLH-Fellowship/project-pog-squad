@@ -70,27 +70,6 @@ body {
     padding-bottom: 20px;
 }
 
-/*
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
-}
-
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
-}
-*/
-
 .banner {
     padding: 20px 0px 50px 0px;
     height: 150px;
@@ -176,4 +155,8 @@ ul, p {
     font-weight: 300;
     text-decoration: none;
     color: black;
+}
+
+.hobbies img {
+    height: 200px;
 }
