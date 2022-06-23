@@ -112,9 +112,9 @@ body {
 }
 
 .tabs a {
-    font-size: 50px;
-    font-weight: 700;
-    color: black;
+    font-size: 25px;
+    font-weight: 100;
+    color: gray;
 }
 
 .banner {
