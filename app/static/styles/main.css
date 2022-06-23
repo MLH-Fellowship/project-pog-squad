@@ -173,6 +173,7 @@ ul, p {
 }
 
 .hobbies img {
+    display: block;
     height: 200px;
     margin-left: auto;
     margin-right: auto;
