@@ -24,6 +24,7 @@ body {
     margin: 0px;
 }
 
+/* HEADER */
 .nav-bar {
     width: 100%;
     display: inline-block;
@@ -71,6 +72,7 @@ body {
 .tabs {
     padding-bottom: 20px;
 }
+/**********/
 
 .banner {
     padding: 20px 0px 50px 0px;
@@ -176,6 +178,7 @@ ul, p {
 }
 
 .hobbies h3 {
+    text-align: center;
     padding: 10px;
 }
 /**********/
