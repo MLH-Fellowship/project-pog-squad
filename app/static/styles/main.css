@@ -102,6 +102,9 @@ body {
 .tabs {
     background-color: #1d539f !important;
     text-align: center;
+    font-size: 25px;
+    font-weight: 100;
+    color: gray;
     height: 100px;
     margin-bottom: 50px;
 
@@ -111,11 +114,13 @@ body {
             hsl(297deg 64% 67%) 99%);
 }
 
+/*
 .tabs a {
     font-size: 25px;
     font-weight: 100;
     color: gray;
 }
+*/
 
 .banner {
     padding: 20px 0px 50px 0px;
