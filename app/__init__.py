@@ -18,6 +18,14 @@ app = Flask(__name__)
 def home():
     return render_template("home.html", img="Talike.jpg", title="Talike", url=os.getenv("URL"))
 
+@app.route("/about-me/")
+def about_me():
+    return render_template("about_me.html", img="Talike.jpg", title="Talike", url=os.getenv("URL"))
+
+@app.route("/contact/")
+def contact():
+    return render_template("contact.html", img="Talike.jpg", title="Talike", url=os.getenv("URL"))
+
 @app.route("/hobbies/")
 def hobbies():
     return render_template("hobbies.html", img="Talike.jpg", title="Talike", url=os.getenv("URL"))
