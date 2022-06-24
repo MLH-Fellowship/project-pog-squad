@@ -48,19 +48,19 @@ body {
 
 @keyframes gradient {
     0% {
-        background: #FF7070;
+        background: #A30000;
     }
     25% {
-        background: #A7FF70;
+        background: #3FA300;
     }
     50% {
-        background: #70F3FF;
+        background: #0096A3;
     }
     75% {
-        background: #DB70FF;
+        background: #7A00A3;
     }
     100% {
-        background: #FF7070;
+        background: #A30000;
     }
 }
 
