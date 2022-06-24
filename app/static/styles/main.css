@@ -50,14 +50,17 @@ body {
     0% {
         background: #FF7070;
     }
-    33% {
+    25% {
         background: #A7FF70;
     }
-    66% {
+    50% {
         background: #70F3FF;
     }
-    100% {
+    75% {
         background: #DB70FF;
+    }
+    100% {
+        background: #FF7070;
     }
 }
 
