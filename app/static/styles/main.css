@@ -43,7 +43,7 @@ body {
     animation-name: gradient;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: normal;
 }
 
 @keyframes gradient {
