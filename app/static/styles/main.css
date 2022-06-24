@@ -33,9 +33,10 @@ body {
     font-weight: 700 !important;
     padding-top: 30px;
 
-    background: linear-gradient(90deg, #e73c7e, #ee7752, #23d5ab, #23a6d5);
+    /* TODO: Fix so colors loop */
+    background: linear-gradient(90deg, #e73c7e, #eec452, #23d5ab, #23a6d5);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -47,6 +48,12 @@ body {
     }
     100% {
         background-position: 50% 100%;
+    }
+    150% {
+        background-position: 75% 25%;
+    }
+    200% {
+        background-position: 100% 50%;
     }
 }
 
