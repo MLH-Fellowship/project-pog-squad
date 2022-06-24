@@ -41,7 +41,7 @@ body {
     */
 
     animation-name: gradient;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -51,10 +51,10 @@ body {
         background: #FF7070;
     }
     33% {
-        background: #eec452;
+        background: #A7FF70;
     }
     66% {
-        background: #A7FF70;
+        background: #70F3FF;
     }
     100% {
         background: #DB70FF;
