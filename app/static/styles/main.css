@@ -34,26 +34,30 @@ body {
     padding-top: 30px;
 
     /* TODO: Fix so colors loop */
-    background: linear-gradient(90deg, #e73c7e, #eec452, #23d5ab, #23a6d5);
+    /*
+    background: linear-gradient(90deg, #FF7070, #eec452, #A7FF70, #DB70FF);
     background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 8s ease infinite;
+    */
+
+    animation-name: gradient;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background: #FF7070;
     }
-    50% {
-        background-position: 25% 75%;
+    33% {
+        background: #eec452;
+    }
+    66% {
+        background: #A7FF70;
     }
     100% {
-        background-position: 50% 100%;
-    }
-    150% {
-        background-position: 75% 25%;
-    }
-    200% {
-        background-position: 100% 50%;
+        background: #DB70FF;
     }
 }
 
