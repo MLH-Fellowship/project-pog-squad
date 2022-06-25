@@ -1,7 +1,6 @@
 # MLH Fellowship Orientation Hackathon - Portfolio Website
-**Track:** Production Engineering
-**Team:** Pog Squad  
-**Members:** Victor Bustillos, Talike Bennett
+**Track:** Production Engineering  
+**Pod:** 22.SUM.15  
 
 ## Description
 For this project, we were tasked with creating a portfolio website using the Flask framework and Jinja templates. We were provided a foundation for the project -- consisting of `__init__.py`, `index.html`, and `main.css` -- and added our unique features from there. A custom page was made for each of the team members. For each page, we listed a few aspects of our lives with sections such as About Me, Work Experience, and Education. We linked our Hobbies section to another page that displays images associated with our hobbies. We even made use of Google Maps to embed a map that highlisghts places that we have traveled to.
@@ -9,37 +8,16 @@ For this project, we were tasked with creating a portfolio website using the Fla
 The Jinja template engine came in handy because it reduced the amount of repeated code we needed to write. The CSS stylesheet also helped with adding visually appealing features to the website pages.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65676639/172240028-1b4dc8be-ee72-441f-8916-c0e933681bec.png" width="500">
-  <img src="https://user-images.githubusercontent.com/65676639/172240053-1dac51a7-1992-4f33-adc8-cfa5c52ed967.png" width="500">
+  <img src="https://user-images.githubusercontent.com/65676639/175757040-f5d10d35-8774-48c0-8f19-96e946556942.png" width="500">
 </p>
 
-## Setup
-1. Before running the website, make sure to install `virtualenv` using PIP. 
-```
-pip install virtualenv
-```
-2. Move to the `app` directory and create a virtual environment.
-```
-cd app
-virtualenv env
-```
-3. Activate the virtual environment. (NOTE: Activation commands may vary.)
-```
-[WINDOWS]      env\Scripts\activate.bat
-[LINUX, MACOS] source env/bin/activate
-```
-4. While inside of the virtual environment, install `flask` and `python-dotenv` using PIP.
-```
-pip install flask
-pip install python-dotenv
-```
-5. Run the Python script `__init__.py`.
-```
-python __init__.py
-```
+## Development Process
+...
 
 ## Tools Used
 ![python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![css](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![sh](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![mysql](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
