@@ -8,7 +8,7 @@ For this project, we were tasked with creating a portfolio website using the Fla
 The Jinja template engine came in handy because it reduced the amount of repeated code we needed to write. The CSS stylesheet also helped with adding visually appealing features to the website pages.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65676639/175757040-f5d10d35-8774-48c0-8f19-96e946556942.png" width="500">
+  <img src="https://user-images.githubusercontent.com/65676639/175758975-bc9c38dc-9cde-4ed4-a8ad-a398182ccb44.gif" width="300">
 </p>
 
 ## Development Process
