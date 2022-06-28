@@ -1,18 +1,36 @@
 from asyncio import constants # ?
-import os  # Import operating system tools
-from flask import Flask, render_template, request, url_for  # Import flask library and associated tools
-from dotenv import load_dotenv # ?
+import os
+from sqlite3 import Time  # Import operating system tools
+from flask import Flask, render_template, request, url_for  # Flask, render_template(), url_for()
+from dotenv import load_dotenv # load_dotenv()
+from peewee import * # Used to connect to database
+import datetime
+from playhouse.shortcuts import model_to_dict
 
 # NOTE: url_for is linked to the functions below and returns the corresponding index; preferred over hardcoding links
 
-"""
-TODO:
-- merge Hobbies page into Home page
-- create three main pages to navigate to: MLH Fellowship, About Me, Contact
-"""
-
-load_dotenv() # Loads .env file
+load_dotenv() # Loads .env file; the data from MySQL is read
 app = Flask(__name__)
+
+# Database
+mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv("MYSQL_PASSWORD"),
+    host=os.getenv("MYSQL_HOST"),
+    port=3306)
+
+# Object-relational mapper (ORM) model (?)
+class TimelinePost(Model):
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.datetime.now)
+
+    class Meta:
+        database = mydb
+
+mydb.connect()
+mydb.create_tables([TimelinePost])
 
 @app.route("/")
 def home():
@@ -25,6 +43,38 @@ def about_me():
 @app.route("/contact/")
 def contact():
     return render_template("contact.html", img="Talike.jpg", url=os.getenv("URL"))
+
+@app.route("/timeline/")
+def timeline():
+    return render_template("timeline.html", img="Talike.jpg", url=os.getenv("URL"))
+
+# Adds timeline post to database
+@app.route("/api/timeline-post/", methods=['POST'])
+def post_timeline_post():
+    name = request.form['name']
+    email = request.form['email']
+    content = request.form['content']
+    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+    return model_to_dict(timeline_post)
+
+# Puts posts in descending order
+@app.route("/api/timeline-post/", methods=['GET'])
+def get_timeline_post():
+    return {'timeline_posts':[model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
+
+# Deletes a specific post
+@app.route("/api/timeline-post/<list_num>/", methods=['DELETE'])
+def delete_timeline_post(list_num):
+    # SOURCE: https://docs.peewee-orm.com/en/latest/peewee/querying.html
+    data = TimelinePost.select().order_by(TimelinePost.created_at.desc())
+    counter = 1
+    for post in data:
+        if counter == int(list_num):
+            post.delete_instance()
+            break
+        else:
+            counter += 1
+    return 'ok'
 
 if __name__ == "__main__":
     app.run(debug=True)

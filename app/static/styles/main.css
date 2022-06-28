@@ -33,15 +33,9 @@ body {
     font-weight: 700 !important;
     padding-top: 30px;
 
-    /* TODO: Fix so colors loop */
-    /*
-    background: linear-gradient(90deg, #FF7070, #eec452, #A7FF70, #DB70FF);
-    background-size: 400% 400%;
-    animation: gradient 8s ease infinite;
-    */
-
+    /* SOURCE: https://techstacker.com/how-to-loop-background-color-animation-css/ */
     animation-name: gradient;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: normal;
 }
@@ -63,38 +57,6 @@ body {
         background: #E00000;
     }
 }
-
-/*
-#mydiv {
-    width: 100%;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
-    animation: background-gradient 5s;
-    animation-iteration-count: infinite;
-    backface-visibility: hidden;
-    animation-timing-function: ease-in-out;
-    background-image: radial-gradient(circle at 90% 80%, transparent, #4d0019);
-  }
-  
-  @keyframes background-gradient {
-    0% {
-      background-color: #ff0000;
-    }
-    25% {
-      background-color: yellow;
-    }
-    50% {
-      background-color: #3333cc;
-    }
-    75% {
-      background-color: #00ffcc;
-    }
-    100% {
-      background-color: #cc9900;
-    }
-  }
-*/
 
 .nav-logo {
     display: flex;
@@ -247,4 +209,19 @@ ul, p {
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+th, td {
+    align-content: center;
+    width: 25%;
+    border: 1px solid black;
+}
+
+td input {
+    width: 100%;
 }
