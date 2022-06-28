@@ -181,25 +181,40 @@ ul, p {
 }
 
 /* HOBBIES SECTION */
-.hobbies .row {
-    display: flex;
-    padding-bottom: 15px;
-}
+/* 
+    SOURCES: 
+    https://www.youtube.com/watch?v=rnhoY5Cdmy0
+    https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+*/
+.hig {
+    /* Variables? */
+    --gap: 64px;
+    --num-cols: 2;
+    --row-height: 300px;
 
-.hobbies .item {
-    flex: 50%;
-    align-items: center;
-}
+    box-sizing: border-box;
+    padding: var(--gap);
 
-.hobbies img {
-    display: block;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
 
-.hobbies h3 {
     text-align: center;
+}
+
+.hig img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    /* Configuration for screen widths 768px and less */
+    .hig {
+        --num-cols: 1;
+        --row-height: 200px;
+    }
 }
 /**********/
 
@@ -211,17 +226,19 @@ ul, p {
     padding-top: 20px;
 }
 
-table {
+/* TIMELINE POSTS */
+.timeline-table {
     border: 1px solid black;
     width: 100%;
 }
 
-th, td {
+.timeline-table th, .timeline-table td {
     align-content: center;
     width: 25%;
     border: 1px solid black;
 }
 
-td input {
+.timeline-table td input {
     width: 100%;
 }
+/**********/
