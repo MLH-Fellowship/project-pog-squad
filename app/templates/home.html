@@ -1,207 +1,69 @@
 {% extends 'index.html' %}
 
-{% block content %}
-<section class="intro">
-    <h2 class="section-title">Introduction</h2>
-    <p>
-        Welcome to my portfolio! My name is Talike (pronounced tah-leek) and I am a 
-        Production Engineering Fellow in the MLH Fellowship for summer 2022. This website
-        serves as the home of all the concepts I have learned while taking part in the
-        fellowship. Each week focused on a different concept and with every concept, this
-        website continued to grow. Feel free to look around, get an idea of what was
-        covered during the fellowship, and learn a little bit more about me!
-    </p>
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 1: Orientation</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        production engineering fundamentals
-        development environments
-        packages + package managers
-        pair coding + code review
-
-        TOOLS USED    
-        Python (.py) + Flask + Jinja
-        HTML (.html)
-        CSS (.css)
-        Git + GitHub
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 2: Linux Fundamentals</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        giving and receiving feedback
-        Linux commands + filesystem + terminal
-        virtual private server (VPS)
-        SSH authentication
-        website domain
-        CTCI: Arrays
-
-        TOOLS USED
-        DigitalOcean
-        DuckDNS
-        tmux
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 3: Scripting</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        scripting
-        deployment automation
-        programs + programs + signals
-        CTCI: String Manipulation + Regex
-
-        TOOLS USED
-        Bash (.sh)
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 4: Services + Databases</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        types of databases + database importance + database mappings
-        services
-        HTTP requests
-        caching
-        CTCI: File Handling
-
-        TOOLS USED
-        MySQL + peewee + environment variables (.env)
-        JavaScript
-        Postman
-        services (.service)
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 5: Testing</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-        CTCI: Linked Lists
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 6: Containers</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 7: Interview Practices</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 8: Continuous Integration</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 9: Monitoring + Networking</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 10: Troubleshooting</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 11: Interview Practice</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
-
-<hr/>
-
-<section class="week-info">
-    <h2 class="section-title">Week 12: Capture the Flag</h2>
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="loading">
-    <!--
-        CONCEPTS LEARNED
-        ...
-
-        TOOLS USED
-        ...
-    -->
-</section>
+{% block css_link %}
+<link lang='sass' rel="stylesheet" href="/static/styles/home.css">
 {% endblock %}
+
+{% block content %}
+<div class="letters">
+    <span style="--i:1">T</span>
+    <span style="--i:2">A</span>
+    <span style="--i:3">L</span>
+    <span style="--i:4">I</span>
+    <span style="--i:5">K</span>
+    <span style="--i:6">E</span>
+</div>
+
+<br>
+
+<div>
+    <a href="{{ url_for('fellowship') }}">Fellowship Experience</a> |
+    <a href="{{ url_for('about_me') }}">About Me</a> |
+    <a href="{{ url_for('contact') }}">Contact</a> |
+    <a href="{{ url_for('timeline') }}">Posts</a>
+</div>
+{% endblock %}
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta property="og:title" content="Personal Portfolio">
+        <meta property="og:description" content="My Personal Portfolio">
+        <meta property="og:url" content="{{ url }}">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+
+        <link lang='sass' rel="stylesheet" href="/static/styles/secret.css">  CSS link
+        <link rel='icon' href='/static/img/favicon.ico' type='image/x-icon' />
+        <title>Talike Bennett's MLH Portfolio</title>  Website tab title
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="letters">
+            <span style="--i:1">T</span>
+            <span style="--i:2">A</span>
+            <span style="--i:3">L</span>
+            <span style="--i:4">I</span>
+            <span style="--i:5">K</span>
+            <span style="--i:6">E</span>
+        </div>
+
+        <br>
+
+        <div>
+            <a href="{{ url_for('fellowship') }}">Fellowship Experience</a> |
+            <a href="{{ url_for('about_me') }}">About Me</a> |
+            <a href="{{ url_for('contact') }}">Contact</a> |
+            <a href="{{ url_for('timeline') }}">Posts</a>
+        </div>
+    </body>
+</html>
+-->

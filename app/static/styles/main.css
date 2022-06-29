@@ -1,13 +1,15 @@
+body {
+    background-color: #f5f5f5;
+    background-size: cover;
+    width: auto;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+
 /* TEXT */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button {
-    font-family: "Raleway", serif;
+h2 {
+    text-transform: uppercase;
 }
 
 h4 {
@@ -15,21 +17,12 @@ h4 {
 }
 /**********/
 
-body {
-    background-color: #f5f5f9;
-    background-size: cover;
-    width: auto;
-    overflow-x: hidden;
-    font-family: "Roboto", serif;
-    margin: 0px;
-}
-
 /* HEADER */
 .nav-bar {
     width: 100%;
     display: inline-block;
     text-align: center;
-    font-family: "Roboto", serif;
+    /* font-family: "Roboto", serif; */
     font-weight: 700 !important;
     padding-top: 30px;
 

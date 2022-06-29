@@ -1,0 +1,60 @@
+/*
+SOURCE(S):
+https://alvarotrigo.com/blog/css-text-animations/ (letter bouncing animation)
+*/
+
+body {
+    padding: 0px;
+    margin: 0px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+/*
+.s_title {
+    font-size: 100px;
+    text-transform: uppercase;
+
+    /* SOURCE: https://www.youtube.com/watch?v=WsspKNtaCIg
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    /* SOURCE: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
+    letter-spacing: 50px;
+}
+*/
+
+.letters {
+    position: relative;
+    font-size: 200px;
+    padding: 0px;
+    margin-top: 75px;
+}
+
+.letters span {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: letter-bounce 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes letter-bounce {
+    0%, 40%, 100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}

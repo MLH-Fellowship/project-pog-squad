@@ -1,11 +1,11 @@
 from asyncio import constants # ?
-import os
-from sqlite3 import Time  # Import operating system tools
+import os # Import operating system tools
+from sqlite3 import Time # ?
 from flask import Flask, render_template, request, url_for  # Flask, render_template(), url_for()
 from dotenv import load_dotenv # load_dotenv()
 from peewee import * # Used to connect to database
 import datetime
-from playhouse.shortcuts import model_to_dict
+from playhouse.shortcuts import model_to_dict # model_to_dict()
 
 # NOTE: url_for is linked to the functions below and returns the corresponding index; preferred over hardcoding links
 
@@ -34,19 +34,23 @@ mydb.create_tables([TimelinePost])
 
 @app.route("/")
 def home():
-    return render_template("home.html", img="Talike.jpg", url=os.getenv("URL"))
+    return render_template("home.html", url=os.getenv("URL"))
+
+@app.route("/fellowship-experience/")
+def fellowship():
+    return render_template("fellowship.html", url=os.getenv("URL"))
 
 @app.route("/about-me/")
 def about_me():
-    return render_template("about_me.html", img="Talike.jpg", url=os.getenv("URL"))
+    return render_template("about_me.html", url=os.getenv("URL"))
 
 @app.route("/contact/")
 def contact():
-    return render_template("contact.html", img="Talike.jpg", url=os.getenv("URL"))
+    return render_template("contact.html", url=os.getenv("URL"))
 
 @app.route("/timeline/")
 def timeline():
-    return render_template("timeline.html", img="Talike.jpg", url=os.getenv("URL"))
+    return render_template("timeline.html", url=os.getenv("URL"))
 
 # Adds timeline post to database
 @app.route("/api/timeline-post/", methods=['POST'])
