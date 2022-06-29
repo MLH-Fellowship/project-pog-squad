@@ -31,7 +31,8 @@
         e.preventDefault(); // Stops HTML from opening a new page
         const f = new FormData(form);
         console.log([...f]);
-        fetch('http://127.0.0.1:5000/api/timeline-post/', {
+        // http://127.0.0.1:5000/api/timeline-post/ -> local version
+        fetch('http://tdbportfolio.duckdns.org:5000/api/timeline-post/', {
             method: "POST",
             body: f,
         })
@@ -58,7 +59,8 @@
         /* GET REQUEST WITH JAVASCRIPT */
         // SOURCE: https://www.javascripttutorial.net/javascript-fetch-api/
         async function getPosts() {
-            let url = 'http://127.0.0.1:5000/api/timeline-post/';
+            // http://127.0.0.1:5000/api/timeline-post/ -> local version
+            let url = 'http://tdbportfolio.duckdns.org:5000/api/timeline-post/';
             try {
                 let res = await fetch(url);
                 return await res.json();
