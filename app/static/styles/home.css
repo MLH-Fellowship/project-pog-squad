@@ -6,42 +6,27 @@ https://alvarotrigo.com/blog/css-text-animations/ (letter bouncing animation)
 body {
     padding: 0px;
     margin: 0px;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: black;
+    font-family: "Roboto", sans-serif;
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* height: 100% */
 }
 
-/*
-.s_title {
-    font-size: 100px;
-    text-transform: uppercase;
-
-    /* SOURCE: https://www.youtube.com/watch?v=WsspKNtaCIg
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-
-    /* SOURCE: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
-    letter-spacing: 50px;
-}
-*/
-
+/* TITLE */
 .letters {
     position: relative;
     font-size: 200px;
     padding: 0px;
-    margin-top: 75px;
+    margin-top: 100px;
 }
 
 .letters span {
     padding-left: 30px;
     padding-right: 30px;
-    font-family: "Roboto", sans-serif;
     color: white;
     position: relative;
     display: inline-block;
@@ -52,9 +37,46 @@ body {
 
 @keyframes letter-bounce {
     0%, 40%, 100% {
-      transform: translateY(0)
+      transform: translateY(0px)
     }
     20% {
       transform: translateY(-20px)
     }
 }
+/**********/
+
+/* NAVIGATION BUTTONS */
+a {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    /* padding: 50px; */
+    margin: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    transform: scale(1.25);
+}
+
+.button-1 {
+    background-color: pink;
+}
+
+.button-2 {
+    background-color: blue;
+}
+
+.button-3 {
+    background-color: yellow;
+}
+
+.button-4 {
+    background-color: lightgreen;
+}
+/**********/

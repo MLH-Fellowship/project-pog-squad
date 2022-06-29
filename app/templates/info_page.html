@@ -5,27 +5,29 @@
 {% endblock %}
 
 {% block content %}
-<header class="nav-bar">
-    <div class="nav-logo">
-        <img src="/static/img/logo.svg" alt="mlh-logo"/>
-    </div>
-    <div class="profile">
-        <a href="{{ url_for('home') }}">
-            <div class="profile-picture">
-                <img src="/static/Talike.jpg" alt="profile-picture"/>
-            </div>
-        </a>
-        <h1>Talike Bennett</h1>
-    </div>
-    <nav class="tabs">
-        <a href="{{ url_for('fellowship') }}">Fellowship Experience</a> |
-        <a href="{{ url_for('about_me') }}">About Me</a> |
-        <a href="{{ url_for('contact') }}">Contact</a> |
-        <a href="{{ url_for('timeline') }}">Posts</a>
-    </nav>
-</header>
+<body>
+    <header class="nav-bar">
+        <div class="nav-logo">
+            <img src="/static/img/logo.svg" alt="mlh-logo"/>
+        </div>
+        <div class="profile">
+            <a href="{{ url_for('home') }}">
+                <div class="profile-picture">
+                    <img src="/static/Talike.jpg" alt="profile-picture"/>
+                </div>
+            </a>
+            <h1>Talike Bennett</h1>
+        </div>
+        <nav class="tabs">
+            <a href="{{ url_for('fellowship') }}">Fellowship Experience</a> |
+            <a href="{{ url_for('about_me') }}">About Me</a> |
+            <a href="{{ url_for('contact') }}">Contact</a> |
+            <a href="{{ url_for('timeline') }}">Posts</a>
+        </nav>
+    </header>
 
-<main>
-    {% block page %}{% endblock %}
-</main>
+    <main>
+        {% block page %}{% endblock %}
+    </main>
+</body>
 {% endblock %}
