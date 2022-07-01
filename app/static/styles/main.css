@@ -1,3 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #f5f5f5;
     background-size: cover;
@@ -15,6 +24,11 @@ h2 {
 h4 {
     color: gray;
 }
+
+ul, p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
 /**********/
 
 /* HEADER */
@@ -25,12 +39,19 @@ h4 {
     /* font-family: "Roboto", serif; */
     font-weight: 700 !important;
     padding-top: 30px;
+    position: sticky; /* Fixed position hides elements below */
+    /* margin-bottom: 200px; */
+    top: 0px;
+    height: 425px;
+    z-index: 1000;
 
     /* SOURCE: https://techstacker.com/how-to-loop-background-color-animation-css/ */
     animation-name: gradient;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: normal;
+
+    transition: 0.3s;
 }
 
 @keyframes gradient {
@@ -55,16 +76,19 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: 0.3s;
 }
 
 .nav-logo img {
     width: 200px;
 }
 
-.profile h1 {
-    font-size: 50px;
-    font-weight: 700;
-    color: white;
+.profile .profile-picture {
+    height: 200px;
+    margin: 10px;
+
+    transition: 0.3s;
 }
 
 .profile img {
@@ -74,17 +98,28 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding: 20px;
+    padding: 10px;
 }
 
-.profile .profile-picture {
-    height: 200px;
+.profile h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    padding: 0px;
+    margin: 20px;
+
+    transition: 0.3s;
 }
 
 .tabs {
     padding-bottom: 20px;
+    transition: 0.3s;
 }
 /**********/
+
+main {
+    transition: 0.3s;
+}
 
 .banner {
     padding: 20px 0px 50px 0px;
@@ -139,27 +174,7 @@ section {
     width: 100%;
 }
 
-html {
-    box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
 
-ul, p {
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
-.hobbies-button {
-    padding: 30px;
-    margin: auto;
-    background-color: blueviolet;
-    color: white;
-    font-size: large;
-}
 
 .user-switch {
     position: absolute;
