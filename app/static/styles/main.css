@@ -34,7 +34,6 @@ ul, p {
 /* HEADER */
 .nav-bar {
     width: 100%;
-    display: inline-block;
     text-align: center;
     /* font-family: "Roboto", serif; */
     font-weight: 700 !important;
@@ -84,9 +83,18 @@ ul, p {
     width: 200px;
 }
 
+.profile {
+    display: inline-block;
+    text-align: center;
+}
+
 .profile .profile-picture {
+    width: 200px;
     height: 200px;
-    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     transition: 0.3s;
 }
