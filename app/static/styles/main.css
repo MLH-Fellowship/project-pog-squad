@@ -250,3 +250,44 @@ section {
     width: 100%;
 }
 /**********/
+
+/* LOGOS */
+.logos {
+    text-align: center;
+}
+
+.logos .item {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    vertical-align: middle;
+
+    width: 80px;
+    height: 80px;
+    /* background-color: wheat; */
+}
+
+.logos img {
+    height: 80px;
+    transition: 0.3s;
+}
+
+.logos .item1:hover img {
+    transform: scale(1.25);
+}
+
+.logos .item2:hover img {
+    transform: scale(1.25);
+}
+
+.logos p {
+    transform: translate(0px, -75px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.logos .item3:hover p {
+    transform: translate(0px, -15px);
+    opacity: 1;
+}
+/**********/

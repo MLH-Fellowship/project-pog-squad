@@ -63,6 +63,7 @@ a {
     margin: 30px;
     text-decoration: none;
     color: black;
+    transition: 0.3s;
 }
 
 a:hover {
