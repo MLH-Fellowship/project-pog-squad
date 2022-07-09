@@ -3,39 +3,97 @@
 {% block content %}
     <section>
         <h2 class="section-title">About Me</h2>
-        {% block about %}{% endblock about %}
+        <p>
+            I'm a Software Engineer from Ciudad Obregón, Sonora, México, currently Living in Zapopan Guadalajara :). <br>
+            I currently work as a cloud AWS Developer at Blue People <br>
+            I love music, dogs and Anime
+        </p>        
     </section>
 
     <hr>
 
     <section>
         <h2 class="section-title">Work Experience</h2>
-        {% block work %}{% endblock work %}
+        <div class="item">
+            <div class="item-details">
+                <div style="display:flex; align-items:center">
+                    <h3 class="item-title">Cloud Developer</h3>
+                    <div class="item-date">
+                        Apr 2022 - Current
+                    </div>
+                </div>
+                <h4 class="item-subtitle">Blue People</h4>
+                <ul>
+                    <li>Developed Full-Stack applications on a microservice architecture using AWS technologies</li>
+                    <li>Took part on requirement analysis and specifications alongside costumers</li>
+                    <li>Maintained long term support for clients on deployed cloud applications, offering support and monitoring</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-details">
+                <div style="display:flex; align-items:center">
+                    <h3 class="item-title">Freelance Software Engineer</h3>
+                    <div class="item-date">
+                        Oct 2021 - Apr 2022
+                    </div>
+                </div>
+                <h4 class="item-subtitle">Centrident</h4>
+                <ul>
+                    <li>Developed software applications using Go, Node, React for clients on a freelance contract</li>
+                    <li>Communicate with costumers to define requirements and set deliveries for the project</li>
+                    <li>Maintained long term support for clients on developed applications</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-details">
+                <div style="display:flex; align-items:center">
+                    <h3 class="item-title">Software Engineer</h3>
+                    <div class="item-date">
+                        Oct 2020 - Sep 2021
+                    </div>
+                </div>
+                <h4 class="item-subtitle">Blue People</h4>
+                <ul>
+                    <li>Developed a REST API using Django and MySQL to store and manage customer data</li>
+                    <li>Developed a full-stack Web landing page using Node.JS and React for client attraction</li>
+                    <li>Developed a system’s administration Web App using Go and MySQL for management and scheduling of clients</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <hr>
 
     <section>
         <h2 class="section-title">Education</h2>
-        {% block education %}{% endblock education %}
+        <div class="item">
+            <div class="item-details">
+                <div style="display:flex; align-items:center">
+                    <h3 class="item-title">Tecnológico de Monterrey</h3>
+                    <div class="item-date">
+                        Aug 2019 - Jun 2023
+                    </div>
+                </div>
+                <h4 class="item-subtitle">Bachelor of Science in Computer Science, 6th semester. 4.0 GPA</h4>
+            </div>
+        </div>        
     </section>
 
     <hr>
 
     <section>
-        <!-- TODO: Try moving to Python -->
         <h2 class="section-title">Hobbies</h2>
-        {% if self._TemplateReference__context.name == '/victor/home.html' %}
-        <a href="{{ url_for('victor_hobbies') }}" class="hobbies">Click to open Hobbies</a>
-        {% else %}
-        <a href="{{ url_for('talike_hobbies') }}" class="hobbies">Click to open Hobbies</a>
-        {% endif %}
+        <a href="{{ url_for('hobbies') }}" class="hobbies">Click to open Hobbies</a>
     </section>
 
     <hr>
 
     <section>
         <h2 class="section-title">Places I've been</h2>
-        {% block map %}{% endblock map %}
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UDKMXBkBxQfbYF92bnvMqtuQVolhCpM&ehbc=2E312F" width="100%" height="500"></iframe>
     </section>
 {% endblock content %}
